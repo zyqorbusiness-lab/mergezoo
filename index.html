@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MergeZoo - Merge to the Final Form</title>
+<meta name="description" content="Drop animal balls into the glowing arena, merge matching pairs, and evolve them to the legendary final form.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="brand">MERGE<span>ZOO</span></div>
+    <div class="stats">
+      <div class="stat"><label>SCORE</label><span id="score">0</span></div>
+      <div class="stat"><label>BEST</label><span id="best">0</span></div>
+    </div>
+    <div class="hud-btns">
+      <button id="rainBtn" class="icon-btn" title="Auto rain" aria-label="Toggle auto rain">🌧️</button>
+      <button id="soundBtn" class="icon-btn" title="Sound" aria-label="Toggle sound">🔊</button>
+      <button id="resetBtn" class="icon-btn" title="Restart" aria-label="Restart">↺</button>
+    </div>
+  </header>
+
+  <div id="chain" aria-label="Evolution chain"></div>
+
+  <div id="stage">
+    <canvas id="game"></canvas>
+    <div id="startOverlay">
+      <div class="start-card">
+        <div class="start-emoji">🐭🦁🐉</div>
+        <h1>MergeZoo</h1>
+        <p>Drop animals into the glowing arena.<br>Two of a kind merge into the next evolution.<br>Can you reach the <b>FINAL FORM</b>?</p>
+        <button id="playBtn">▶ TAP TO PLAY</button>
+      </div>
+    </div>
+    <div id="finale" class="hidden">
+      <div class="finale-text">FINAL FORM!</div>
+      <div class="finale-sub">🐉 The Dragon has awakened 🐉</div>
+    </div>
+  </div>
+
+  <div id="pickerWrap">
+    <div id="picker" role="listbox" aria-label="Choose animal"></div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
